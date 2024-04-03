@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELECT MENU</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div class="hero">
+        <div class="selector">
+            <div id="select-fold">
+                <p id="selectText">Select Social Media</p>
+                <i class="fa fa-caret-down" style="font-size:25px"></i>
+            </div>
+            <ul id="list" class="hide">
+                <li class="options">
+                    <a href="https://www.facebook.com/"><i class="fa fa-facebook" style="font-size:24px"></i></a>
+                    <p>Facebook</p>
+                </li>
+                <li class="options">
+                    <a href="https://www.instagram.com/accounts/login/"><i class="fa fa-instagram" style="font-size:24px"></i></a>
+                    <p>Instagram</p>
+                </li>
+                <li class="options">
+                   <a href="https://twitter.com/"><i class="fa fa-twitter" style="font-size:24px"></i></a>
+                    <p>Twitter</p>
+                </li>
+                <li class="options">
+                    <a href="https://www.whatsapp.com/"><i class="fa fa-whatsapp" style="font-size:24px"></i></a>
+                    <p>Whatsapp</p>
+                </li>
+                <li class="options">
+                    <a href="https://www.youtube.com/"><i class="fa fa-youtube-play" style="font-size:24px"></i></a>
+                    <p>Youtube</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        var selectfold = document.getElementById("select-fold");
+        var selectText = document.getElementById("selectText");
+        var options = document.getElementsByClassName("options");
+
+        selectfold.onclick = function(){
+            list.classList.toggle("hide");
+        }
+
+        for(option of options){
+            option.onclick = function(){
+                selectText.innerHTML = this.textContent;
+            }
+        }
+        </script>
+</body>
+</html>
